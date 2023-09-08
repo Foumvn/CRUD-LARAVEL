@@ -1,5 +1,6 @@
 
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,7 +15,7 @@
     <div class="container ">
   <div class="row align-items-end">
     <div class="col s12">
-    <h1>Ajouter un etudiant</h1>
+    <h1>Modifier un etudiant</h1>
     <hr>
     
     @if (session('success'))
@@ -28,24 +29,26 @@
         @endforeach
     </ul>
 
-    <form action="/ajouter/traitement" method="POST">
+    <form action="/update/traitement" method="POST">
         @csrf
+
+        <input type="text" name="id style="display:none;" value="{{$etudiants->id}}">
   <div class="mb-3">
     <label for="Nom" class="form-label">Nom</label>
-    <input type="text" class="form-control" id="Nom" name="nom">
+    <input type="text" class="form-control" id="Nom" name="nom" value="{{$etudiants->nom}}">
   </div>  
   
   <div class="mb-3">
     <label for="Nom" class="form-label">Prenom</label>
-    <input type="text" class="form-control" id="Prenom" name="prenom" >
+    <input type="text" class="form-control" id="Prenom" name="prenom" value="{{$etudiants->prenom}}">
   </div> 
 
   <div class="mb-3">
     <label for="Nom" class="form-label">Classe</label>
-    <input type="text" class="form-control" id="Nom" name="classe">
+    <input type="text" class="form-control" id="Nom" name="classe" value="{{$etudiants->classe}}">
   </div> 
   
-  <button type="submit" class="btn btn-primary">Ajouter un etudiant</button>
+  <button type="submit" class="btn btn-primary">Modifier un etudiant</button>
 </form>
 <br>
      <a href="/liste" class="btn btn-danger">Liste des etudiants</a>
