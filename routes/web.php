@@ -12,10 +12,7 @@ use App\Http\Controllers\EtudiantController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/update-etudiant/{id}',[EtudiantController::class, 'update_etudiant']);
-Route::post('/update/traitement',[EtudiantController::class, 'update_etudiant_traitement']);
-
+Route::get('/delete-etudiant/{id}',[EtudiantController::class, 'delete_etudiant']);
 Route::get('/liste',[EtudiantController::class, 'liste_etudiant']);
 Route::get('/ajouter',[EtudiantController::class, 'ajouter_etudiant']);
 Route::post('/ajouter/traitement',[EtudiantController::class, 'ajouter_etudiant_traitement']);

@@ -40,7 +40,7 @@
                 <td>{{$etudiant->classe}}</td>
                 <td>
                     <a href="/update-etudiant/{{$etudiant->id}}" class="btn btn-info">Update</a>
-                    <a href="#" class="btn btn-danger">Delete</a>
+                    <a href="/delete-etudiant/{{$etudiant->id}}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
           @endforeach
